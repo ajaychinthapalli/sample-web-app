@@ -47,6 +47,7 @@ jobs:
         accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
         tunnelIdentifier: github-action-tunnel
         scVersion: 4.7.1
+        noRemoveCollidingTunnels: true
 
     - name: Run E2E Tests
       run: cd test && mvn clean test
