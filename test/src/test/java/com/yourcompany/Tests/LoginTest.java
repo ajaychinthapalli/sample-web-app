@@ -8,7 +8,7 @@ public class LoginTest extends TestBase {
 
     @Test
     public void validLogin(){
-        driver.get("http://localhost:5000/");
+        driver.get("http://localhost:3000/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
         driver.findElement(By.cssSelector(".btn_action")).click();
