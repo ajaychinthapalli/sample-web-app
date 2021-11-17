@@ -42,11 +42,11 @@ jobs:
 
     - name: Start Sauce Connect Tunnel
       uses: saucelabs/sauce-connect-action@v2
-        with:
-          username: ${{ secrets.SAUCE_USERNAME }}
-          accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
-          tunnelIdentifier: github-action-tunnel
-          scVersion: 4.6.4
+      with:
+        username: ${{ secrets.SAUCE_USERNAME }}
+        accessKey: ${{ secrets.SAUCE_ACCESS_KEY }}
+        tunnelIdentifier: github-action-tunnel
+        scVersion: 4.6.4
 
     - name: Run E2E Tests
       run: echo "Testing..."
