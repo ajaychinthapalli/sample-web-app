@@ -47,7 +47,7 @@ public class TestBase {
         sauceOptions.setCapability("platformName", "windows 10");
         sauceOptions.setCapability("username", username);
         sauceOptions.setCapability("accessKey", accesskey);
-        sauceOptions.setCapability("name", name.getMethodName());
+        sauceOptions.setCapability("name","login-test-example");
         sauceOptions.setCapability("tunnelIdentifier", "github-action-tunnel");
 
 
