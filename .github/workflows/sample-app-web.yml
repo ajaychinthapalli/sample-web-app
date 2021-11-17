@@ -49,4 +49,4 @@ jobs:
         scVersion: 4.6.4
 
     - name: Run E2E Tests
-      run: echo "Testing..."
+      run: cd test && mvn clean test
