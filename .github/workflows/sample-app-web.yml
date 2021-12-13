@@ -3,11 +3,7 @@
 
 name: Swag Labs Sample App Workflow
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
+on: push
 
 jobs:
   build:
@@ -27,18 +23,6 @@ jobs:
     steps:
     - name: Checkout Repository
       uses: actions/checkout@v2
-
-    - name: Setup Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    # Site Testing steps
-    - name: Install dependencies
-      run: npm install
-
-    - name: Start local app
-      run: npm run start &
 
     - name: Start Sauce Connect Tunnel
       uses: saucelabs/sauce-connect-action@v2.0.0
